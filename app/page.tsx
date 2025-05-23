@@ -84,7 +84,7 @@ export default function Home() {
         {/* Hero Section */}
         <div className="max-w-[1180px] mx-auto py-16 text-center">
           <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
-            <h1 className="text-5xl font-semibold mb-4 text-[#F34A03]">Sites de Alta Conversão</h1>
+            <h1 className="text-5xl font-semibold mb-4 text-[#F34A03]">Seu Site em até 72 Horas</h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
               Transforme sua presença online com landing pages e sites de alta conversão
             </p>
@@ -225,7 +225,7 @@ export default function Home() {
         </div>
 
         {/* Pacotes Section */}
-        <div id="pacotes" className="max-w-[1180px] mx-auto py-16 grid gap-12">
+        <div id="pacotes" className="mx-auto py-16 grid gap-12">
           <motion.div
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -238,34 +238,54 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div variants={container} initial="hidden" animate="show" className="grid gap-8 md:grid-cols-3">
-            {/* Pacote 1 - Landing Pages */}
+          <motion.div variants={container} initial="hidden" animate="show" className="grid gap-4 md:grid-cols-3 lg:grid-cols-5">
+            {/* Pacote 1 - Landing Pages Modelo */}
             <motion.div
               variants={item}
               className="rounded-xl border border-[#2a1915] overflow-hidden bg-[#1a0d0a] flex flex-col"
             >
               <div className="p-6 bg-[#241310] text-center">
-                <h3 className="text-xl font-bold mb-2">Landing Pages</h3>
-                <p className="text-sm text-gray-400 mb-4">Modelo personalizado</p>
-                <div className="text-3xl font-bold text-[#F34A03]">R$ 1.499</div>
+                <h3 className="text-lg font-bold mb-2">Landing Page Modelo</h3>
+                <p className="text-sm text-gray-400 mb-4">Modelo adaptável</p>
+                <div className="text-2xl font-bold text-[#F34A03]">R$ 1.499</div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                <ul className="space-y-3 mb-6 flex-1">
+                <ul className="space-y-3 mb-6 flex-1 text-sm">
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Design responsivo</span>
+                    <span>Domínio e Hospedagem</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Otimização para SEO</span>
+                    <span>Design Responsivo</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Formulário de contato</span>
+                    <span>Até 4 Seções</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Entrega em 7 dias</span>
+                    <span>Copywriting padronizado com foco em conversão</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>SEO</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Suporte</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Manutenção rotineira</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Até 5 contas de e-mail profissionais</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Entrega em até 72 horas</span>
                   </li>
                 </ul>
                 <a
@@ -277,7 +297,65 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Pacote 2 - Sites Institucionais */}
+            {/* Pacote 2 - Landing Pages Personalizadas */}
+            <motion.div
+              variants={item}
+              className="rounded-xl border border-[#2a1915] overflow-hidden bg-[#1a0d0a] flex flex-col"
+            >
+              <div className="p-6 bg-[#241310] text-center">
+                <h3 className="text-lg font-bold mb-2">Landing Page Personalizada</h3>
+                <p className="text-sm text-gray-400 mb-4">100% customizável</p>
+                <div className="text-2xl font-bold text-[#F34A03]">R$ 1.999</div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <ul className="space-y-3 mb-6 flex-1 text-sm">
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Domínio e Hospedagem</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Design exclusivo e personalizado</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Até 10 seções</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Copywriting personalizado focado em conversão</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>SEO Avançado</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Suporte prioritário</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Manutenção rotineira prioritária</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Até 10 contas de e-mail profissionais</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Entrega em até 10 dias úteis</span>
+                  </li>
+                </ul>
+                <a
+                  href="#contato"
+                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors"
+                >
+                  Contratar
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Pacote 3 - Sites Institucionais Modelo */}
             <motion.div
               variants={item}
               className="rounded-xl border border-[#F34A03] overflow-hidden bg-[#1a0d0a] flex flex-col relative"
@@ -286,23 +364,23 @@ export default function Home() {
                 POPULAR
               </div>
               <div className="p-6 bg-[#241310] text-center">
-                <h3 className="text-xl font-bold mb-2">Sites Institucionais</h3>
-                <p className="text-sm text-gray-400 mb-4">Modelo padronizado</p>
-                <div className="text-3xl font-bold text-[#F34A03]">R$ 2.999</div>
+                <h3 className="text-lg font-bold mb-2">Sites Institucionais</h3>
+                <p className="text-sm text-gray-400 mb-4">Modelo adaptável</p>
+                <div className="text-2xl font-bold text-[#F34A03]">R$ 2.999</div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                <ul className="space-y-3 mb-6 flex-1">
+                <ul className="space-y-3 mb-6 flex-1 text-sm">
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Até 5 páginas</span>
+                    <span>Domínio e Hospedagem</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Design responsivo</span>
+                    <span>Design Responsivo</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Otimização para SEO</span>
+                    <span>Até 6 páginas</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
@@ -310,7 +388,27 @@ export default function Home() {
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Entrega em 15 dias</span>
+                    <span>Copywriting estratégico</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>SEO Avançado</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Suporte prioritário</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Manutenção emergencial</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Até 10 contas de e-mail profissionais</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Entrega em até 15 dias úteis</span>
                   </li>
                 </ul>
                 <a
@@ -322,37 +420,115 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Pacote 3 - Sites Personalizados */}
+            {/* Pacote 4 - Sites Institucionais Personalizados */}
             <motion.div
               variants={item}
               className="rounded-xl border border-[#2a1915] overflow-hidden bg-[#1a0d0a] flex flex-col"
             >
               <div className="p-6 bg-[#241310] text-center">
-                <h3 className="text-xl font-bold mb-2">Sites Personalizados</h3>
-                <p className="text-sm text-gray-400 mb-4">Solução completa</p>
-                <div className="text-3xl font-bold text-[#F34A03]">Sob consulta</div>
+                <h3 className="text-lg font-bold mb-2">Sites Personalizados</h3>
+                <p className="text-sm text-gray-400 mb-4">100% customizável</p>
+                <div className="text-2xl font-bold text-[#F34A03]">R$ 3.499</div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                <ul className="space-y-3 mb-6 flex-1">
+                <ul className="space-y-3 mb-6 flex-1 text-sm">
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Design exclusivo</span>
+                    <span>Domínio e Hospedagem</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Páginas ilimitadas</span>
+                    <span>Design exclusivo e personalizado</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Funcionalidades avançadas</span>
+                    <span>Até 10 páginas</span>
+                  </li>
+                   <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Blog integrado</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Integrações personalizadas</span>
+                    <span>Copywriting personalizado focado em conversão</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>SEO Avançado</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
                     <span>Suporte prioritário</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Manutenção emergencial prioritária</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Até 10 contas de e-mail profissionais</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Entrega em até 20 dias úteis</span>
+                  </li>
+                </ul>
+                <a
+                  href="#contato"
+                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors"
+                >
+                  Contratar
+                </a>
+              </div>
+            </motion.div>
+            
+            {/* Pacote 5 - E-Commerce */}
+            <motion.div
+              variants={item}
+              className="rounded-xl border border-[#2a1915] overflow-hidden bg-[#1a0d0a] flex flex-col"
+            >
+              <div className="p-6 bg-[#241310] text-center">
+                <h3 className="text-lg font-bold mb-2">E-Commerce</h3>
+                <p className="text-sm text-gray-400 mb-4">Solução completa</p>
+                <div className="text-2xl font-bold text-[#F34A03]">Sob consulta</div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <ul className="space-y-3 mb-6 flex-1 text-sm">
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Domínio e Hospedagem</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Design exclusivo e personalizado</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Integração com Nuvemshop</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Copywriting personalizado voltado a vendas</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>SEO focado em vendas</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Suporte prioritário</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Manutenção emergencial prioritária</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Orientação para tráfego pago e performance comercial</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="h-5 w-5 text-[#F34A03] mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Entrega em até 40 dias úteis</span>
                   </li>
                 </ul>
                 <a
@@ -407,9 +583,11 @@ export default function Home() {
                 <label className="block text-[#F34A03] mb-2">Pacote de interesse</label>
                 <select className="w-full p-3 rounded-lg bg-[#241310] border border-[#2a1915] focus:border-[#F34A03] outline-none">
                   <option value="">Selecione uma opção</option>
-                  <option value="landing-page">Landing Page</option>
-                  <option value="site-institucional">Site Institucional</option>
-                  <option value="site-personalizado">Site Personalizado</option>
+                  <option value="landing-page">Landing Page Modelo</option>
+                  <option value="landing-page">Landing Page Personalizada</option>
+                  <option value="landing-page">Site Institucional Modelo</option>
+                  <option value="site-institucional">Site Personalizado</option>
+                  <option value="site-personalizado">E-Commerce</option>
                 </select>
               </div>
               <div className="md:col-span-2">

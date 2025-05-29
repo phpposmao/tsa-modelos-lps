@@ -69,9 +69,6 @@ export default function Modelo2() {
             <Link href="#servicos" className="text-sm font-medium text-white/70 hover:text-white">
               Serviços
             </Link>
-            <Link href="#sobre" className="text-sm font-medium text-white/70 hover:text-white">
-              Sobre
-            </Link>
             <Link href="#contato" className="text-sm font-medium text-white/70 hover:text-white">
               Contato
             </Link>
@@ -344,73 +341,6 @@ export default function Modelo2() {
                 QUERO UM PROJETO ASSIM <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section id="sobre" className="py-20">
-          <div className="max-w-[1180px] mx-auto px-4 sm:px-6 space-y-12">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-              className="text-center space-y-4"
-            >
-              <div className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm backdrop-blur-md">
-                <Sparkles className="mr-1 h-3.5 w-3.5 text-pink-500" />
-                <span>Como Trabalhamos</span>
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Processo Criativo Eficiente
-              </h2>
-              <p className="mx-auto max-w-[700px] text-white/70 md:text-xl">
-                Um método simples e eficaz para transformar suas ideias em projetos de sucesso.
-              </p>
-            </motion.div>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-              className="grid gap-8 md:grid-cols-4"
-            >
-              {[
-                {
-                  number: "01",
-                  title: "Descoberta",
-                  description: "Entendemos seus objetivos, necessidades e público-alvo para alinhar expectativas.",
-                },
-                {
-                  number: "02",
-                  title: "Estratégia",
-                  description: "Desenvolvemos um plano criativo para atingir seus objetivos com máximo impacto.",
-                },
-                {
-                  number: "03",
-                  title: "Criação",
-                  description: "Transformamos conceitos em designs impactantes que comunicam sua mensagem.",
-                },
-                {
-                  number: "04",
-                  title: "Resultados",
-                  description: "Entregamos projetos finalizados que geram impacto real para seu negócio.",
-                },
-              ].map((step, index) => (
-                <motion.div key={index} variants={item} className="relative">
-                  <div className="space-y-4">
-                    <div className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
-                      {step.number}
-                    </div>
-                    <h3 className="text-xl font-bold">{step.title}</h3>
-                    <p className="text-white/70">{step.description}</p>
-                  </div>
-                  {index < 3 && (
-                    <div className="absolute top-6 right-0 hidden md:block w-full h-0.5"></div>
-                  )}
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
         </section>
 

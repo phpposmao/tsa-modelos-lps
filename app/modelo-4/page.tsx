@@ -64,9 +64,6 @@ export default function Modelo4() {
               Sobre
             </Link>
             <Link href="#" className="text-sm font-medium hover:text-orange-500">
-              Projetos
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:text-orange-500">
               Contato
             </Link>
           </nav>

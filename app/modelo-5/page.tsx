@@ -47,16 +47,13 @@ export default function Modelo5() {
             <Link href="#" className="text-sm font-medium text-white/70 hover:text-white">
               Início
             </Link>
-            <Link href="#" className="text-sm font-medium text-white/70 hover:text-white">
-              Palestrantes
-            </Link>
-            <Link href="#" className="text-sm font-medium text-white/70 hover:text-white">
+            <Link href="#programacao" className="text-sm font-medium text-white/70 hover:text-white">
               Programação
             </Link>
-            <Link href="#" className="text-sm font-medium text-white/70 hover:text-white">
-              Local
+            <Link href="#ingressos" className="text-sm font-medium text-white/70 hover:text-white">
+              Ingressos 
             </Link>
-            <Link href="#" className="text-sm font-medium text-white/70 hover:text-white">
+            <Link href="#contato" className="text-sm font-medium text-white/70 hover:text-white">
               Contato
             </Link>
           </nav>
@@ -460,67 +457,6 @@ export default function Modelo5() {
           </div>
         </section>
 
-        {/* Sponsors */}
-        <section className="py-20">
-          <div className="max-w-[1180px] mx-auto space-y-12">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-              className="text-center space-y-4"
-            >
-              <div className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm backdrop-blur-md">
-                <span>Patrocinadores</span>
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nossos Patrocinadores</h2>
-              <p className="mx-auto max-w-[700px] text-white/70 md:text-xl">
-                Empresas que tornam este evento possível.
-              </p>
-            </motion.div>
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-center text-xl font-bold mb-6">Patrocinadores Diamante</h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-                  {[1, 2, 3].map((sponsor) => (
-                    <div
-                      key={sponsor}
-                      className="flex items-center justify-center p-8 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm"
-                    >
-                      <Image
-                        src={`/image/modelo-5/logo-tsa-branco.png`}
-                        alt={`Patrocinador ${sponsor}`}
-                        width={200}
-                        height={100}
-                        className="max-h-16 w-auto"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="text-center text-xl font-bold mb-6">Patrocinadores Ouro</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  {[4, 5, 6, 7].map((sponsor) => (
-                    <div
-                      key={sponsor}
-                      className="flex items-center justify-center p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm"
-                    >
-                      <Image
-                        src={`/image/modelo-5/logo-tsa-branco.png`}
-                        alt={`Patrocinador ${sponsor}`}
-                        width={160}
-                        height={80}
-                        className="max-h-12 w-auto"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>  
-            </div>
-          </div>
-        </section>
-
         {/* Venue */}
         <section className="py-20 bg-gradient-to-b from-black to-purple-950/30">
           <div className="max-w-[1180px] mx-auto space-y-12">
@@ -581,71 +517,6 @@ export default function Modelo5() {
                 />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-20">
-          <div className="max-w-[1180px] mx-auto space-y-12">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-              className="text-center space-y-4"
-            >
-              <div className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm backdrop-blur-md">
-                <span>Perguntas Frequentes</span>
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Dúvidas Comuns</h2>
-              <p className="mx-auto max-w-[700px] text-white/70 md:text-xl">
-                Respostas para as perguntas mais frequentes sobre o evento.
-              </p>
-            </motion.div>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-              className="grid gap-6 md:grid-cols-2"
-            >
-              {[
-                {
-                  question: "Quando começa a venda de ingressos?",
-                  answer: "As vendas já estão abertas! Os ingressos são limitados, então garanta o seu o quanto antes.",
-                },
-                {
-                  question: "Posso transferir meu ingresso para outra pessoa?",
-                  answer:
-                    "Sim, você pode transferir seu ingresso até 7 dias antes do evento através da plataforma de ingressos.",
-                },
-                {
-                  question: "Haverá tradução simultânea das palestras?",
-                  answer: "Sim, todas as palestras internacionais terão tradução simultânea para português.",
-                },
-                {
-                  question: "O evento terá transmissão online?",
-                  answer: "Sim, oferecemos ingressos digitais para quem deseja acompanhar o evento remotamente.",
-                },
-                {
-                  question: "Qual a política de cancelamento?",
-                  answer: "Cancelamentos com até 30 dias de antecedência recebem reembolso de 70% do valor pago.",
-                },
-                {
-                  question: "Haverá certificado de participação?",
-                  answer: "Sim, todos os participantes receberão certificado digital de participação.",
-                },
-              ].map((faq, index) => (
-                <motion.div
-                  key={index}
-                  variants={item}
-                  className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
-                >
-                  <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
-                  <p className="text-white/70">{faq.answer}</p>
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
         </section>
 

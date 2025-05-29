@@ -45,9 +45,6 @@ export default function Modelo3() {
               Produtos
             </Link>
             <Link href="#" className="text-sm font-medium hover:text-emerald-600">
-              Sobre
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:text-emerald-600">
               Avaliações
             </Link>
             <Link href="#" className="text-sm font-medium hover:text-emerald-600">

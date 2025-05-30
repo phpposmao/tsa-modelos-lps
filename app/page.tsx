@@ -55,11 +55,9 @@ export default function Home() {
 
   const { theme } = useTheme();
 
-
-
   return (
     <div className={glancyr.className + " " + "flex flex-col min-h-screen bg-white text-white dark:bg-[#111111]"}>
-      <header className="border-b border-neutral-100">
+      <header className="border-b border-neutral-100 dark:border-neutral-800">
         <div className="max-w-[1180px] mx-auto py-4 px-4 sm:px-6 flex justify-between items-center">
           <Link href="/" className="flex items-center">
             {theme === "dark" ?<Image src="/image/logo-tsa-branco.png" alt="TSA Logo" width={110} height={30} className="mr-2" /> : <Image src="/image/logo-tsa-preto.png" alt="Tecnofeal Logo" width={130} height={30} className="mr-2" />}
@@ -91,11 +89,11 @@ export default function Home() {
 
       <main className="flex-1 px-4 sm:px-6">
         {/* Hero Section */}
-        <div className="max-w-[1140px] mx-auto mt-10 py-24 rounded-2xl overflow-hidden bg-[url(/image/BANNER-SITE.png)] bg-cover shadow-2xl">
-          <div className="md:max-w-[50%] p-5 flex justify-center text-center md:text-left ">
+        <div className={`max-w-[1140px] mx-auto mt-10 pt-5 pb-5 rounded-2xl overflow-hidden ${theme === "dark" ? "bg-[url(/image/hero-box-preto.png)]" : "bg-[url(/image/hero-box-branco.png)]"} bg-[url(/image/BANNER-SITE.png)] bg-cover shadow-2xl`}>
+          <div className="p-5 flex flex-col-reverse md:flex-row justify-center items-center text-center md:text-left ">
             <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
               <h1 className="text-5xl font-semibold mb-4 text-[#F34A03]">Seu Site<br/> em até 72 Horas</h1>
-              <p className="text-xl text-[#000000] max-w-2xl mx-auto mb-8">
+              <p className="text-xl text-[#000000] dark:text-white max-w-2xl mx-auto mb-8">
                 Transforme sua presença online<br/> com landing pages e sites de alta conversão
               </p>
               <Link
@@ -107,6 +105,9 @@ export default function Home() {
               </Link>
               
             </motion.div>
+            <div className="md:w-1/2 h-full flex justify-center">
+              <Image src="/image/NOTE.png" alt="notebook-hero" width={425} height={300} className="" />
+            </div>
           </div>
         </div>
 
@@ -624,7 +625,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="border-t border-neutral-100">
+      <footer className="border-t border-neutral-100 dark:border-neutral-800">
         <div className="max-w-[1180px] mx-auto py-6 px-4 sm:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <Link href="/" className="flex items-center">

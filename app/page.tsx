@@ -2,9 +2,11 @@
 
 import Link from "next/link"
 import localFont from "next/font/local"
+import { useTheme } from "next-themes"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { ArrowRight, Check } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const glancyr = localFont({
   src: [
@@ -51,15 +53,22 @@ export default function Home() {
     show: { y: 0, opacity: 1 },
   }
 
+  const { theme } = useTheme();
+
+
+
   return (
-    <div className={glancyr.className + " " + "flex flex-col min-h-screen bg-white text-white"}>
+    <div className={glancyr.className + " " + "flex flex-col min-h-screen bg-white text-white dark:bg-[#111111]"}>
       <header className="border-b border-neutral-100">
         <div className="max-w-[1180px] mx-auto py-4 px-4 sm:px-6 flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <Image src="/image/logo-tsa-preto.png" alt="TSA Logo" width={120} height={40} className="mr-2" />
+            {theme === "dark" ?<Image src="/image/logo-tsa-branco.png" alt="TSA Logo" width={110} height={30} className="mr-2" /> : <Image src="/image/logo-tsa-preto.png" alt="Tecnofeal Logo" width={130} height={30} className="mr-2" />}
           </Link>
           <nav>
-            <ul className="flex space-x-6 text-black">
+            <ul className="flex space-x-6 text-black dark:text-white items-center">
+              <li>
+                <ThemeToggle />
+              </li>
               <li>
                 <Link href="#modelos" className="hover:text-[#F34A03] transition-colors">
                   Modelos
@@ -83,7 +92,7 @@ export default function Home() {
       <main className="flex-1 px-4 sm:px-6">
         {/* Hero Section */}
         <div className="max-w-[1140px] mx-auto mt-10 py-24 rounded-2xl overflow-hidden bg-[url(/image/BANNER-SITE.png)] bg-cover shadow-2xl">
-          <div className="max-w-[50%] flex justify-center text-left ">
+          <div className="md:max-w-[50%] p-5 flex justify-center text-center md:text-left ">
             <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
               <h1 className="text-5xl font-semibold mb-4 text-[#F34A03]">Seu Site<br/> em até 72 Horas</h1>
               <p className="text-xl text-[#000000] max-w-2xl mx-auto mb-8">
@@ -110,7 +119,7 @@ export default function Home() {
             className="text-center"
           >
             <h2 className="text-3xl font-medium mb-4 text-[#F34A03]">Nossos Modelos</h2>
-            <p className="text-[#000000] max-w-2xl mx-auto">
+            <p className="text-[#000000] dark:text-white max-w-2xl mx-auto">
               Explore nossos cinco modelos de landing pages com layouts modernos, elementos interativos e design
               responsivo, otimizados para conversão.
             </p>
@@ -132,13 +141,13 @@ export default function Home() {
               <motion.div key={modelo.path} variants={item}>
                 <Link
                   href={modelo.path}
-                  className="group relative overflow-hidden rounded-xl border border-neutral-100 p-2 hover:border-[#ff5722] block bg-neutral-50"
+                  className="group relative overflow-hidden rounded-xl border border-neutral-100 dark:border-neutral-800 p-2 hover:border-[#ff5722] block bg-neutral-50 dark:bg-neutral-700"
                 >
                   <div className={modelo.imsrc}>
                   </div>
                   <div className="p-4">
                     <h3 className="text-xl font-semibold text-[#ff5722]">{modelo.name}</h3>
-                    <p className="text-sm text-[#000000]">{modelo.desc}</p>
+                    <p className="text-sm text-[#000000] dark:text-white">{modelo.desc}</p>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 transition-opacity group-hover:opacity-100">
                     <span className="rounded-full bg-[#F34A03] px-6 py-2 font-medium text-white flex items-center">
@@ -161,7 +170,7 @@ export default function Home() {
             className="text-center"
           >
             <h2 className="text-3xl font-medium mb-4 text-[#F34A03]">Sites Institucionais</h2>
-            <p className="text-[#000000] max-w-2xl mx-auto">
+            <p className="text-[#000000] dark:text-white max-w-2xl mx-auto">
               Soluções completas para empresas que buscam uma presença online profissional e impactante
             </p>
           </motion.div>
@@ -169,20 +178,20 @@ export default function Home() {
           <motion.div variants={container} initial="hidden" animate="show" className="grid gap-8 md:grid-cols-2">
             {/* Site Institucional 1 */}
             <motion.div variants={item}>
-              <div className="group relative overflow-hidden rounded-xl border border-neutral-100 p-2 hover:border-[#F34A03] block bg-neutral-50">
+              <div className="group relative overflow-hidden rounded-xl border border-neutral-100 dark:border-neutral-800 p-2 hover:border-[#F34A03] block bg-neutral-50 dark:bg-neutral-700">
                 <div className="flex h-[250px] items-center justify-center rounded-md bg-neutral-100 p-4">
                   <span className="text-2xl font-medium text-[#F34A03]">Empresarial Pro</span>
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl text-[#f34a03] font-bold">Empresarial Pro</h3>
-                  <p className="text-sm text-[#000000] mt-2">
+                  <p className="text-sm text-[#000000] dark:text-white mt-2">
                     Site institucional completo para empresas de médio e grande porte, com design profissional e
                     recursos avançados.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    <span className="bg-neutral-200 text-xs px-3 py-1 rounded-full text-gray-700">Até 10 páginas</span>
-                    <span className="bg-neutral-200 text-xs px-3 py-1 rounded-full text-gray-700">Blog integrado</span>
-                    <span className="bg-neutral-200 text-xs px-3 py-1 rounded-full text-gray-700">
+                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">Até 10 páginas</span>
+                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">Blog integrado</span>
+                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">
                       Painel administrativo
                     </span>
                   </div>
@@ -198,22 +207,22 @@ export default function Home() {
 
             {/* Site Institucional 2 */}
             <motion.div variants={item}>
-              <div className="group relative overflow-hidden rounded-xl border border-neutral-100 p-2 hover:border-[#F34A03] block bg-neutral-50">
+              <div className="group relative overflow-hidden rounded-xl border border-neutral-100 dark:border-neutral-800 p-2 hover:border-[#F34A03] block bg-neutral-50 dark:bg-neutral-700">
                 <div className="flex h-[250px] items-center justify-center rounded-md bg-neutral-100 p-4">
                   <span className="text-2xl font-medium text-[#F34A03]">E-commerce Plus</span>
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl text-[#f34a03] font-bold">E-commerce Plus</h3>
-                  <p className="text-sm text-[#000000] mt-2">
+                  <p className="text-sm text-[#000000] dark:text-white mt-2">
                     Solução completa de e-commerce com catálogo de produtos, carrinho de compras e gateway de pagamento
                     integrado.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    <span className="bg-neutral-200 text-xs px-3 py-1 rounded-full text-gray-700">
+                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">
                       Catálogo ilimitado
                     </span>
-                    <span className="bg-neutral-200 text-xs px-3 py-1 rounded-full text-gray-700">Pagamentos online</span>
-                    <span className="bg-neutral-200 text-xs px-3 py-1 rounded-full text-gray-700">Gestão de estoque</span>
+                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">Pagamentos online</span>
+                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">Gestão de estoque</span>
                   </div>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 transition-opacity group-hover:opacity-100">
@@ -236,20 +245,20 @@ export default function Home() {
             className="text-center"
           >
             <h2 className="text-3xl font-medium mb-4 text-[#F34A03]">Nossos Pacotes</h2>
-            <p className="text-[#000000] max-w-2xl mx-auto">
+            <p className="text-[#000000] dark:text-white max-w-2xl mx-auto">
               Escolha o pacote que melhor atende às necessidades do seu negócio
             </p>
           </motion.div>
 
-          <motion.div variants={container} initial="hidden" animate="show" className="grid text-black gap-4 md:grid-cols-3 lg:grid-cols-5">
+          <motion.div variants={container} initial="hidden" animate="show" className="grid text-black dark:text-white gap-4 md:grid-cols-3 lg:grid-cols-5">
             {/* Pacote 1 - Landing Pages Modelo */}
             <motion.div
               variants={item}
-              className="rounded-xl border border-neutral-100 overflow-hidden bg-neutral-50 flex flex-col"
+              className="rounded-xl border border-neutral-100 dark:border-neutral-800 overflow-hidden bg-neutral-50 dark:bg-neutral-700 flex flex-col"
             >
               <div className="p-6 text-center">
                 <h3 className="text-lg font-bold mb-2">Landing Page Modelo</h3>
-                <p className="text-sm text-gray-600 mb-4">Modelo adaptável</p>
+                <p className="text-sm text-gray-500 mb-4">Modelo adaptável</p>
                 <div className="text-2xl font-bold text-[#F34A03]">R$ 1.499</div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
@@ -303,11 +312,11 @@ export default function Home() {
             {/* Pacote 2 - Landing Pages Personalizadas */}
             <motion.div
               variants={item}
-              className="rounded-xl border border-neutral-100 overflow-hidden bg-neutral-50 flex flex-col"
+              className="rounded-xl border border-neutral-100 dark:border-neutral-800 overflow-hidden bg-neutral-50 dark:bg-neutral-700 flex flex-col"
             >
               <div className="p-6 text-center">
                 <h3 className="text-lg font-bold mb-2">Landing Page Personalizada</h3>
-                <p className="text-sm text-gray-600 mb-4">100% customizável</p>
+                <p className="text-sm text-gray-500 mb-4">100% customizável</p>
                 <div className="text-2xl font-bold text-[#F34A03]">R$ 1.999</div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
@@ -361,14 +370,14 @@ export default function Home() {
             {/* Pacote 3 - Sites Institucionais Modelo */}
             <motion.div
               variants={item}
-              className="rounded-xl border-2 border-[#F34A03] overflow-hidden bg-neutral-50 flex flex-col relative"
+              className="rounded-xl border-2 border-[#F34A03] overflow-hidden bg-neutral-50 dark:bg-neutral-700 flex flex-col relative"
             >
               <div className="absolute top-0 right-0 bg-[#F34A03] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                 PREFERIDO
               </div>
               <div className="p-6 text-center">
                 <h3 className="text-lg font-bold mb-2">Site Institucional</h3>
-                <p className="text-sm text-gray-600 mb-4">Modelo adaptável</p>
+                <p className="text-sm text-gray-500 mb-4">Modelo adaptável</p>
                 <div className="text-2xl font-bold text-[#F34A03]">R$ 2.999</div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
@@ -426,11 +435,11 @@ export default function Home() {
             {/* Pacote 4 - Sites Institucionais Personalizados */}
             <motion.div
               variants={item}
-              className="rounded-xl border border-neutral-100 overflow-hidden bg-neutral-50 flex flex-col"
+              className="rounded-xl border border-neutral-100 dark:border-neutral-800 overflow-hidden bg-neutral-50 dark:bg-neutral-700 flex flex-col"
             >
               <div className="p-6 text-center">
                 <h3 className="text-lg font-bold mb-2">Site Personalizado</h3>
-                <p className="text-sm text-gray-600 mb-4">100% customizável</p>
+                <p className="text-sm text-gray-500 mb-4">100% customizável</p>
                 <div className="text-2xl font-bold text-[#F34A03]">R$ 3.499</div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
@@ -488,11 +497,11 @@ export default function Home() {
             {/* Pacote 5 - E-Commerce */}
             <motion.div
               variants={item}
-              className="rounded-xl border border-neutral-100 overflow-hidden bg-neutral-50 flex flex-col"
+              className="rounded-xl border bborder-neutral-100 dark:border-neutral-800 overflow-hidden bg-neutral-50 dark:bg-neutral-700 flex flex-col"
             >
               <div className="p-6 text-center">
                 <h3 className="text-lg font-bold mb-2">E-Commerce</h3>
-                <p className="text-sm text-gray-600 mb-4">Solução completa</p>
+                <p className="text-sm text-gray-500 mb-4">Solução completa</p>
                 <div className="text-2xl font-bold text-[#F34A03]">Sob consulta</div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
@@ -551,11 +560,11 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="rounded-xl bg-neutral-50 text-[#000000] border border-neutral-100 p-8"
+            className="rounded-xl bg-neutral-50 dark:bg-neutral-700 text-[#000000] dark:text-white border border-neutral-100 dark:border-neutral-800 p-8"
           >
             <div className="text-center mb-8">
               <h2 className="text-3xl font-medium mb-4 text-[#F34A03]">Entre em contato</h2>
-              <p className="text-[#000000] max-w-2xl mx-auto">
+              <p className="text-[#000000] dark:text-white max-w-2xl mx-auto">
                 Preencha o formulário abaixo e entraremos em contato para discutir seu projeto
               </p>
             </div>
@@ -565,26 +574,26 @@ export default function Home() {
                 <label className="block text-[#F34A03] mb-2">Nome Completo*</label>
                 <input
                   type="text"
-                  className="w-full p-3 rounded-lg bg-neutral-100 border border-neutral-200 focus:border-[#F34A03] outline-none"
+                  className="w-full p-3 rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-950 focus:border-[#F34A03] dark:focus:border-[#F34A03] outline-none"
                 />
               </div>
               <div>
                 <label className="block text-[#F34A03] mb-2">Email*</label>
                 <input
                   type="email"
-                  className="w-full p-3 rounded-lg bg-neutral-100 border border-neutral-200 focus:border-[#F34A03] outline-none"
+                  className="w-full p-3 rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-950 focus:border-[#F34A03] dark:focus:border-[#F34A03] outline-none"
                 />
               </div>
               <div>
                 <label className="block text-[#F34A03] mb-2">Telefone*</label>
                 <input
                   type="tel"
-                  className="w-full p-3 rounded-lg bg-neutral-100 border border-neutral-200 focus:border-[#F34A03] outline-none"
+                  className="w-full p-3 rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-950 focus:border-[#F34A03] dark:focus:border-[#F34A03] outline-none"
                 />
               </div>
               <div>
                 <label className="block text-[#F34A03] mb-2">Pacote de interesse</label>
-                <select className="w-full p-3 rounded-lg bg-neutral-100 border border-neutral-200 focus:border-[#F34A03] outline-none">
+                <select className="w-full p-3 rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-950 focus:border-[#F34A03] dark:focus:border-[#F34A03] outline-none">
                   <option value="">Selecione uma opção</option>
                   <option value="landing-page">Landing Page Modelo</option>
                   <option value="landing-page">Landing Page Personalizada</option>
@@ -597,7 +606,7 @@ export default function Home() {
                 <label className="block text-[#F34A03] mb-2">Mensagem</label>
                 <textarea
                   rows={4}
-                  className="w-full p-3 rounded-lg bg-neutral-100 border border-neutral-200focus:border-[#F34A03] outline-none"
+                  className="w-full p-3 rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-950 focus:border-[#F34A03] dark:focus:border-[#F34A03] outline-none"
                 ></textarea>
               </div>
             </div>
@@ -619,9 +628,9 @@ export default function Home() {
         <div className="max-w-[1180px] mx-auto py-6 px-4 sm:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <Link href="/" className="flex items-center">
-              <Image src="/image/logo-tsa-preto.png" alt="TSA Logo" width={120} height={40} className="mr-2" />
+              {theme === "dark" ?<Image src="/image/logo-tsa-branco.png" alt="Tecnofeal Logo" width={110} height={30} className="mr-2" /> : <Image src="/image/logo-tsa-preto.png" alt="Tecnofeal Logo" width={130} height={30} className="mr-2" />}
             </Link>
-            <div className="text-sm text-[#000000]">
+            <div className="text-sm mt-5 md:mt-0 text-[#000000] dark:text-white">
               &copy; {new Date().getFullYear()} TSA Business Hub. Todos os direitos reservados.
             </div>
           </div>

@@ -143,6 +143,7 @@ export default function Home() {
                 <Link
                   href={modelo.path}
                   className="group relative overflow-hidden rounded-xl border border-neutral-100 dark:border-neutral-800 p-2 hover:border-[#ff5722] block bg-neutral-50 dark:bg-neutral-700"
+                  target="_blank"
                 >
                   <div className={modelo.imsrc}>
                   </div>
@@ -180,17 +181,16 @@ export default function Home() {
             {/* Site Institucional 1 */}
             <motion.div variants={item}>
               <div className="group relative overflow-hidden rounded-xl border border-neutral-100 dark:border-neutral-800 p-2 hover:border-[#F34A03] block bg-neutral-50 dark:bg-neutral-700">
-                <div className="flex h-[250px] items-center justify-center rounded-md bg-neutral-100 p-4">
-                  <span className="text-2xl font-medium text-[#F34A03]">Empresarial Pro</span>
+                <div className="flex h-[250px] items-center justify-center rounded-md bg-[url(/modelo1-hero.png)] p-4">
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl text-[#f34a03] font-bold">Empresarial Pro</h3>
                   <p className="text-sm text-[#000000] dark:text-white mt-2">
-                    Site institucional completo para empresas de médio e grande porte, com design profissional e
+                    Site institucional completo para empresas, com design profissional e
                     recursos avançados.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">Até 10 páginas</span>
+                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">Até 5 páginas</span>
                     <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">Blog integrado</span>
                     <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">
                       Painel administrativo
@@ -198,39 +198,14 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 transition-opacity group-hover:opacity-100">
-                  <span className="rounded-full bg-[#F34A03] px-6 py-2 font-medium text-white flex items-center">
-                    Saiba mais
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Site Institucional 2 */}
-            <motion.div variants={item}>
-              <div className="group relative overflow-hidden rounded-xl border border-neutral-100 dark:border-neutral-800 p-2 hover:border-[#F34A03] block bg-neutral-50 dark:bg-neutral-700">
-                <div className="flex h-[250px] items-center justify-center rounded-md bg-neutral-100 p-4">
-                  <span className="text-2xl font-medium text-[#F34A03]">E-commerce Plus</span>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl text-[#f34a03] font-bold">E-commerce Plus</h3>
-                  <p className="text-sm text-[#000000] dark:text-white mt-2">
-                    Solução completa de e-commerce com catálogo de produtos, carrinho de compras e gateway de pagamento
-                    integrado.
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">
-                      Catálogo ilimitado
+                  <a
+                  href="https://modelo-si.tsabusinesshub.com/" target="_blank"
+                  >
+                    <span className="rounded-full bg-[#F34A03] px-6 py-2 font-medium text-white flex items-center">
+                      Saiba mais
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </span>
-                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">Pagamentos online</span>
-                    <span className="bg-neutral-200 dark:bg-neutral-800 text-xs px-3 py-1 rounded-full text-gray-700 dark:text-neutral-300">Gestão de estoque</span>
-                  </div>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 transition-opacity group-hover:opacity-100">
-                  <span className="rounded-full bg-[#F34A03] px-6 py-2 font-medium text-white flex items-center">
-                    Saiba mais
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </span>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -302,8 +277,8 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="#contato"
-                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors"
+                  href="https://wa.me/5519984440183/?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20pacote%20LP%20Modelo%2C%20pode%20me%20informar%20mais%20sobre%3F"
+                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors" target="_blank"
                 >
                   Contratar
                 </a>
@@ -360,8 +335,8 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="#contato"
-                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors"
+                  href="https://wa.me/5519984440183/?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20pacote%20LP%20Personalizada%2C%20pode%20me%20informar%20mais%20sobre%3F"
+                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors" target="_blank"
                 >
                   Contratar
                 </a>
@@ -425,8 +400,8 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="#contato"
-                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors"
+                  href="https://wa.me/5519984440183/?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20pacote%20Site%20Institucional%20Modelo%2C%20pode%20me%20informar%20mais%20sobre%3F"
+                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors" target="_blank"
                 >
                   Contratar
                 </a>
@@ -487,8 +462,8 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="#contato"
-                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors"
+                  href="https://wa.me/5519984440183/?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20pacote%20Site%20Institucional%20Personalizado%2C%20pode%20me%20informar%20mais%20sobre%3F"
+                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors" target="_blank"
                 >
                   Contratar
                 </a>
@@ -545,10 +520,10 @@ export default function Home() {
                   </li>
                 </ul>
                 <a
-                  href="#contato"
-                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors"
+                  href="https://wa.me/5519984440183/?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20pacote%20E-Commerce%2C%20pode%20me%20informar%20mais%20sobre%3F"
+                  className="w-full py-3 bg-[#F34A03] text-white rounded-full text-center font-medium hover:bg-[#e64a19] transition-colors" target="_blank"
                 >
-                  Solicitar orçamento
+                  Solicitar Orçamento
                 </a>
               </div>
             </motion.div>
